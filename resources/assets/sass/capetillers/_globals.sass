@@ -1,0 +1,69 @@
+
+body
+	background: 
+		color: #f4f4f4
+		image: url('/img/pattern.png')
+		repeat: repeat
+		attachment: fixed
+
+.add--padding
+	padding-top: 120px
+	padding-bottom: 120px
+	&-small
+		padding-top: 60px
+		padding-bottom: 60px
+
+.margin--bottom
+	margin-bottom: 120px
+	&-small
+		margin-bottom: 60px
+
+
+
+.strip--margin
+	&-bottom
+		margin-bottom: -60px
+
+.section--dark,
+.section--secondary	
+	display: flex
+	flex-direction: column
+	justify-content: center
+	min-height: 100vh
+	@extend .add--padding
+	background: $secondary-color	
+	color: $mute-color
+
+.section--secondary	
+	background: $primary-color
+
+
+.primary--header
+	text-shadow: $mute-color 3px 3px, rgba($primary-color, 0.5) 4px 4px 2px
+	+media-up(md)
+		font-size: 52px
+
+.secondary--header
+	text-shadow: $mute-color 3px 3px, rgba($secondary-color, 0.5) 4px 4px 2px
+	+media-up(md)
+		font-size: 52px
+
+
+.backgroud--mute-pattern
+	background:
+		color: $mute-color
+		image: url('/img/pattern.png')
+		repeat: repeat
+		attachment: fixed		
+
+
+.notify__big
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 100020		
+
+
+.zup
+	position: relative
+	z-index: 100

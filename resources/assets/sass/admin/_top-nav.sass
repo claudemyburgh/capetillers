@@ -1,0 +1,77 @@
+
+#menu__trigger
+	position: relative
+	display: block
+	width: 50px
+	height: 50px
+	border-right: solid 1px $mute-border-color
+	cursor: pointer
+	&::after 
+		font-family: "lunacon"
+		content: $unicode-navicon
+		width: 50px
+		height: 50px
+		display: block
+		line-height: 50px
+		text-align: center
+
+.menu__trigger
+
+	&__loader
+		position: absolute
+		left: 55px
+		top: 8px
+		padding: 9px 11px 2px 11px
+		text-align: center
+		background: #fff
+		display: none
+		+radius
+		filter: drop-shadow(rgba(#000, 0.3) 0 0px 3px )
+		z-index: 100001
+
+		&::before 
+		  position: absolute
+		  content: ""
+		  height: 0
+		  width: 0 
+		  left: -7px
+		  border-right: 7px solid #fff
+		  border-top: 7px solid transparent
+		  border-bottom: 7px solid transparent	
+
+
+.admin 
+	&__nav
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 50px
+		background: mix($dark-color, #fff, 2%)
+		box-shadow: rgba(#000, 0.15) 0 0 2px
+		z-index: 10000
+
+
+		&__left
+			display: block
+			width: 60px
+			height: 50px
+			float: left
+			border-right: solid 1px $mute-border-color
+			transition: all 0.25s ease
+			background: mix($dark-color, #fff, 4%)
+			+media-up(md)
+				width: 220px
+
+		&__right
+			position: relative
+			height: 50px
+			display: block
+			float: left
+
+
+body.menu-small
+	.admin__nav__left 
+		width: 0px		
+		+media-up(md)
+			width: 60px	

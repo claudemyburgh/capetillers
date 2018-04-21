@@ -1,0 +1,42 @@
+
+.dashboard
+
+	&__block 
+		display: flex
+		flex-direction: row
+		background: #fff
+		box-shadow: rgba(#000, 0.15) 0 2px 3px
+		flex-wrap: wrap
+		margin-bottom: 15px
+		&:hover 
+			box-shadow: rgba(#000, 0.25) 0 3px 5px
+
+		&--left 
+			flex: 1
+			background: $primary-color
+			background: linear-gradient(to bottom, $primary-color, darken($primary-color, 2%))
+			color: #fff
+			display: flex 
+			align-items: center
+			justify-content: center
+			min-width: 100px
+			min-height: 100px
+
+
+		&--right
+			padding: 15px
+			flex: 3
+			display: flex 
+			justify-content: center
+			flex-direction: column
+
+			h1, h2, h3, h4, h5, h6, p 
+				margin: 0		
+				padding: 0
+
+		&--link
+			h1, h2, h3, h4, h5, h6, p 
+				color: $dark-color
+
+			&:hover
+				text-decoration: none

@@ -1,0 +1,83 @@
+
+.img__blocks__wrapper
+	display: block
+	display: flex
+	flex-direction: row
+	justify-content: start
+	flex-wrap: wrap
+
+.img__blocks
+	position: relative
+	width: 100%
+	background: $primary-color
+	display: block
+	margin: 2%
+	overflow: hidden
+	border: solid 5px $mute-color
+	&::before
+		position: relative
+		width: 100%
+		content: ''
+		padding-top: 100%	
+		display: block
+
+	&::after 
+		position: absolute
+		content: attr(data-product)
+		top: 0
+		left: 0	
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		text-align: center
+		align-items: center
+		text-shadow: rgba($secondary-color, 0.75) 0 2px 2px
+		font-size: 20px
+		font-weight: 700
+		text-transform: uppercase
+		transform: scale(0.5)
+		opacity: 0
+		transition: all 0.25s ease
+		pointer-events: none
+
+	img 
+		position: absolute
+		top: 0
+		width: 100%
+		display: block
+		padding: 0
+		margin: 0
+		opacity: 0.75
+		transform: scale(1)
+		transition: all 0.25s ease	
+
+
+	&:hover 
+		img
+			transform: scale(1.2)	
+			opacity: 0.25
+
+		&::after 
+			transform: scale(1)
+			opacity: 1		
+
+
+	+media-up(sm)
+		width: 29%
+
+
+	// &::before 
+	// 	position: relative
+	// 	display: flex
+	// 	justify-content: center
+	// 	flex-direction: row
+	// 	items-align: center
+	// 	content: 
+	// 	top: 0
+	// 	width: 100%
+	// 	height: 100%	
+	// 	padding-bottom: 100%
+
+	
+	

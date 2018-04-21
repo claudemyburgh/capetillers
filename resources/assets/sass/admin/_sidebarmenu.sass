@@ -1,0 +1,84 @@
+
+@keyframes comein
+	0%
+		transform: translateX(100px)
+	100%
+		transform: translateX(0px)
+
+
+.admin 
+	&__sidebar
+		position: fixed
+		top: 50px
+		left: 0
+		bottom: 0
+		background: $dark-color
+		width: 60px
+		box-shadow: rgba(#000, 0.15) 0 0 2px
+		transition: all 0.25s ease
+		z-index: 10001
+		overflow-x: hidden
+		+media-up(md)
+			width: 220px
+
+		&__menu 
+			margin: 15px 0
+			padding: 0
+			list-style: none
+
+			li 
+				display: block
+				line-height: 27px 
+				padding: 7px 10px
+				width: 100%
+				white-space: nowrap
+
+
+				i.lunacon
+					min-width: 40px
+					height: 30px
+					line-height: 24px
+					display: inline-block
+					font-size: 14px
+					text-align: center
+					float: left
+
+				a 
+					display: block	
+					text-decoration: none
+					color: $mute-color
+					font-weight: 700
+					white-space: nowrap
+					+clearfix
+					&:hover
+						text-decoration: none
+
+					span
+						display: none
+						float: left
+						white-space: nowrap
+						+media-up(md)
+							display: block	
+
+				&:hover,
+				&.active
+					background: $mute-color 
+
+					a 
+						color: $dark-color
+						
+
+
+body.menu-small
+
+	.admin
+		&__sidebar
+			width: 0px
+			+media-up(md)
+				width: 60px
+
+			&__menu
+			
+				li 	a   span 
+					animation: comein 0.5s
+					display: none			
