@@ -46,7 +46,6 @@
 		    			<select class="form__item" name="category_id" id="category_id">
 		    				@foreach ($categories as $cat)
 			    				<option value="{{ $cat->id }}" {{ old('category_id', $product->category_id === $cat->id) ? ' selected' : '' }} >{{ $cat->name }}</option>
-
 		    				@endforeach
 		    			</select>
 		    			
