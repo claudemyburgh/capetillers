@@ -12,31 +12,31 @@
 		<div class="row flex">
 			@foreach ($agents as $agent)
 				<div class="md-col-4 jQueryEqualHeight ">
-					<div class="panel panel--default text--secondary block_animation_elements">
-						<div class="panel__header">{{ $agent->area }}</div>
+					<div itemscope itemtype="http://schema.org/Person" class="panel panel--default text--secondary block_animation_elements">
+						<div itemprop="workLocation" class="panel__header">{{ $agent->area }}</div>
 						<div class="panel__body">
 							<p>
-								<strong>{{ $agent->name }}</strong>
+								<strong itemprop="givenName">{{ $agent->name }}</strong>
 								
 							</p>
 							@if ($agent->company)
-								<p><strong>Company:</strong> {{ $agent->company }}</p>
+								<p><strong >Company:</strong><span itemprop="worksFor"> {{ $agent->company }}</span></p>
 							@endif
 
 							@if ($agent->phone)
-								<p><strong>Phone:</strong> <a href="tel:{{ trim($agent->phone) }}">{{ $agent->phone }}</a></p>
+								<p><strong >Phone:</strong> <a href="tel:{{ trim($agent->phone) }}"><span itemprop="telephone" >{{ $agent->phone }}</span></a></p>
 							@endif
 
 							@if ($agent->cell)
-								<p><strong>Cell Phone:</strong> <a href="tel:{{ trim($agent->cell) }}">{{ $agent->cell }}</a></p>
+								<p><strong>Cell Phone:</strong> <ahref="tel:{{ trim($agent->cell) }}"><span itemprop="telephone"  >{{ $agent->cell }}</span></a></p>
 							@endif
 
 							@if ($agent->email)
-								<p><strong>Email:</strong> <a href="mailto:{{ trim($agent->email) }}">{{ $agent->email }}</a></p>
+								<p><strong >Email:</strong> <a  href="mailto:{{ trim($agent->email) }}"><span itemprop="email">{{ $agent->email }}</span></a></p>
 							@endif
 
 							@if ($agent->website)
-								<p><strong>Website:</strong> <a href="mailto:{{ trim($agent->website) }}">{{ $agent->website }}</a></p>
+								<p><strong>Website:</strong> <a  href="mailto:{{ trim($agent->website) }}"><span itemprop="url" >{{ $agent->website }}</span></a></p>
 							@endif
 
 

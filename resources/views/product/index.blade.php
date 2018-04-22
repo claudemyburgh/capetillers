@@ -18,7 +18,7 @@
 	
 	<div class="wrapper margin--bottom-small">
 		@if ($products->count())
-			<div class="row flex">
+			<div class="row flex ">
 				@foreach ($products as $product)
 					<div class="sm-col-6 md-col-3">
 						<a class="panel__link" href="{{ route('product.show', [$category, $product]) }}">					

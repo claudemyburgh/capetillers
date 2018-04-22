@@ -133,6 +133,7 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 	    $('.jQueryEqualHeight').jQueryEqualHeight('.panel .panel__body');
 	});
 
+
 	if ($('.product__photo__list').length) {
 
 		$('.product__photo__list').flickity({
