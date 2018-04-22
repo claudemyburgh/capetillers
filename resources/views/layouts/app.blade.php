@@ -15,14 +15,14 @@
 </head>
 <body>
 	
-	<div id="fb-root"></div>
+{{-- 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
 	  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=178574036113971&autoLogAppEvents=1';
 	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	}(document, 'script', 'facebook-jssdk'));</script> --}}
 
 	<div class="the__loader" >
 		<div class="sk-folding-cube">
@@ -58,7 +58,7 @@
 		@endif
 		@yield('content')
 		@include('layouts.partials._contact_list')
-		<footer class="footer">
+{{-- 		<footer class="footer">
 			<div class="wrapper">
 				<div class="row">
 					<div class="md-col-4">
@@ -84,7 +84,7 @@
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer> --}}
 		<footer class=" footer footer__developer">
 			<div class="wrapper">
 				<div class="row text-align-center">
