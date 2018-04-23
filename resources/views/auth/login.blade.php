@@ -21,7 +21,7 @@
             </div>    
              
             <div class="form__group {{ $errors->has('password') ? 'has__danger' : '' }} ">
-                <label for="password" class="form__label">E-Mail Address</label>
+                <label for="password" class="form__label">Password</label>
                 <input type="password" name="password" id="password" class="form__item" value="{{ old('password') }}" >
                 @if ($errors->has('password'))
                     <small class="form__helper">

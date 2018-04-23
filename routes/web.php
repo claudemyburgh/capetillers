@@ -38,41 +38,47 @@ Route::group(['middleware' => ['auth', 'roles:admin'], 'prefix' => 'admin', 'as'
 	 */
 	Route::get('/', 'AdminController@index')->name('index');
 
-	/**
-	 * Categories 
-	 */
-	Route::get('categories', 'CategoriesController@index')->name('categories.index');
+	Route::group(['middleware' => ['roles:super admin']], function(){
 
-	/**
-	 * Users
-	 */
-	Route::get('users', 'UsersController@index')->name('users.index');
+		/**
+		 * Categories 
+		 */
+		Route::get('categories', 'CategoriesController@index')->name('categories.index');
+
+		/**
+		 * Users
+		 */
+		Route::get('users', 'UsersController@index')->name('users.index');
+
+
+		/**
+		 * Products
+		 */
+		Route::get('products', 'ProductsController@index')->name('products.index');
+		Route::get('products/list', 'ProductsController@list')->name('products.list');
+		Route::get('product/create', 'ProductsController@create')->name('product.create.start');
+		Route::get('product/create/{product}', 'ProductsController@create')->name('product.create');
+		Route::post('product/{product}', 'ProductsController@store')->name('product.store');
+
+		/**
+		 * Photos
+		 */
+
+		Route::post('/product/{product}/upload', 'PhotosController@store')->name('product.photo.store');
+		Route::delete('/product/{product}/upload/{photo}', 'PhotosController@destroy')->name('product.photo.destroy');
+
+		/**
+		 * Roles and Permissions
+		 */
+		Route::get('rolesandpermissions', 'RolesPermissionsController@index')->name('rolesandpermissions.index');
+
+	});
 
 	/**
 	 * Clients
 	 */
 	Route::get('clients', 'ClientsController@index')->name('clients.index');
 
-	/**
-	 * Products
-	 */
-	Route::get('products', 'ProductsController@index')->name('products.index');
-	Route::get('products/list', 'ProductsController@list')->name('products.list');
-	Route::get('product/create', 'ProductsController@create')->name('product.create.start');
-	Route::get('product/create/{product}', 'ProductsController@create')->name('product.create');
-	Route::post('product/{product}', 'ProductsController@store')->name('product.store');
-
-	/**
-	 * Photos
-	 */
-
-	Route::post('/product/{product}/upload', 'PhotosController@store')->name('product.photo.store');
-	Route::delete('/product/{product}/upload/{photo}', 'PhotosController@destroy')->name('product.photo.destroy');
-
-	/**
-	 * Roles and Permissions
-	 */
-	Route::get('rolesandpermissions', 'RolesPermissionsController@index')->name('rolesandpermissions.index');
 
 
 	/**

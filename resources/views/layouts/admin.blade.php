@@ -26,10 +26,11 @@
         </div>
         <div class="admin__sidebar">
             <ul class="admin__sidebar__menu">
-            	@role('super admin')
                 <li  class="{{ return_if(on_page('admin' ), ' active') }}">
                     <a href="{{ route('admin.index') }}"><i class="lunacon lunacon-dashboard"></i> <span>Dashbord</span></a>
                 </li>
+                
+            	@role('super admin')
                 <li class="{{ return_if(on_page('admin/users*' ), ' active') }}">
                     <a href="{{ route('admin.users.index') }}"><i class="lunacon lunacon-users-solid"></i> <span>Users</span></a>
                 </li>
