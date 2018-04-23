@@ -36,7 +36,7 @@
 							@endif
 
 							@if ($agent->website)
-								<p><strong>Website:</strong> <a  href="mailto:{{ trim($agent->website) }}"><span itemprop="url" >{{ $agent->website }}</span></a></p>
+								<p><strong>Website:</strong> <a  href="{{ trim($agent->website) }}"><span itemprop="url" >{{ $agent->website }}</span></a></p>
 							@endif
 
 
