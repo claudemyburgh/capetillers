@@ -26,6 +26,7 @@
         </div>
         <div class="admin__sidebar">
             <ul class="admin__sidebar__menu">
+            	@role('super admin')
                 <li  class="{{ return_if(on_page('admin' ), ' active') }}">
                     <a href="{{ route('admin.index') }}"><i class="lunacon lunacon-dashboard"></i> <span>Dashbord</span></a>
                 </li>
@@ -38,11 +39,10 @@
                 <li class="{{ return_if(on_page('admin/products*' ), ' active') }}">
                     <a href="{{ route('admin.products.index') }}"><i class="lunacon lunacon-giftbox"></i> <span>Products</span></a>
                 </li>
-{{--                 <li>
-                    <a href="#"><i class="lunacon lunacon-tag"></i> <span>Tags</span></a>
-                </li> --}}
+				@endrole
 
-                @role('super admin')
+                
+
                 <li class="{{ return_if(on_page('admin/agents*' ), ' active') }}">
                     <a href="{{ route('admin.agents.index') }}"><i class="lunacon lunacon-users-solid"></i> <span>Sales Agents</span></a>
                 </li>                
@@ -50,12 +50,8 @@
                 <li class="{{ return_if(on_page('admin/clients*' ), ' active') }}">
                     <a href="{{ route('admin.clients.index') }}"><i class="lunacon lunacon-address-book"></i> <span>Clients Leads</span></a>
                 </li>                
-            
+                @role('super admin')
 
-{{--                 <li class="{{ return_if(on_page('admin/settings*' ), ' active') }}">
-                    <a href="{{ route('admin.clients.index') }}"><i class="lunacon lunacon-gears"></i> <span>Settings</span></a>
-                </li> --}}
-                
                 <li class="{{ return_if(on_page('admin/rolesandpermissions*' ), ' active') }}">
                     <a href="{{ route('admin.rolesandpermissions.index') }}"><i class="lunacon lunacon-management"></i> <span>Roles &amp; Permissions</span></a>
                 </li>
