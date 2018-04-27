@@ -81,7 +81,7 @@
 
 		    		<div class="form__group {{ $errors->has('content') ? ' has__danger' : '' }} ">
 		    			<label for="content" class="form__label">Content Description</label>
-<textarea class="form__item" name="content" id="content" cols="30" rows="10">{{ old('content', $product->content) }}</textarea>
+<textarea class="form__item" name="content" id="content editor" cols="30" rows="10">{{ old('content', $product->content) }}</textarea>
 		    			
 		    			@if($errors->has('content'))
 							<small class="form__helper">

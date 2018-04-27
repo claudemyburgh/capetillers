@@ -21,6 +21,7 @@ Vue.component('data-component', require('./components/DataTable.vue'));
 require('slimscroll')
 
 
+
 const luna = require('luna-sass/Framework/js/luna.js');
 
 Vue.component('sidebar-button', require('./components/SidebarButton.vue'));
@@ -39,7 +40,7 @@ const app = new Vue({
 	$(document).Luna();
 
 
-
+	var editor = CodeMirror(document.getElementById('editor'))
 
 	// $('#menu__trigger').click(function(){
 
