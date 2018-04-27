@@ -36,7 +36,7 @@
 										
 									<a href="{{ route('product.show', [$category, $product]) }}" class="btn btn--secondary btn--block">VIEW PRODUCT</a>
 									@role('super admin')
-										<a href="{{ route('admin.product.create', $product) }}" class="btn btn--block">EDIT PRODUCT</a>
+										<a target="_blank" href="{{ route('admin.product.create', $product) }}" class="btn btn--block">EDIT PRODUCT</a>
 									@endrole
 									</div>
 								</div>
