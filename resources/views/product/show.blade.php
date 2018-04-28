@@ -10,7 +10,7 @@
 	<div class="wrapper">
 		<div class="row text-align-center add--padding-small">
 			<div class="md-col-8 md-offset-2">
-				<h1 class="text--primary primary--header">{{ ucwords($product->name) }}</h1>
+				<h1 class="text--primary primary--header">{{ strtoupper($product->name) }}</h1>
 				{{-- <h4>STOCK NUMBER - {{ $product->sku }}</h4> --}}
 			</div>
 		</div>
