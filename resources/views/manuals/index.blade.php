@@ -28,7 +28,7 @@
 					</div>
 				</div>
 				<div class="card__footer">
-					<a href="#" class="btn btn--secondary btn--block">DOWNLOAD</a>
+					<a target="_blank" href="{{ asset('/manual/diesel-engine-manual.pdf') }}" class="btn btn--secondary btn--block">DOWNLOAD</a>
 				</div>
 			</div>
 		</div>		
@@ -45,7 +45,7 @@
 					</div>
 				</div>
 				<div class="card__footer">
-					<a href="#" class="btn btn--secondary btn--block">DOWNLOAD</a>
+					<a target="_blank" href="{{ asset('/manual/petrol-engine-manual.pdf') }}" class="btn btn--secondary btn--block">DOWNLOAD</a>
 				</div>
 			</div>
 		</div>		
@@ -62,7 +62,7 @@
 					</div>
 				</div>
 				<div class="card__footer">
-					<a href="#" class="btn btn--secondary btn--block">DOWNLOAD</a>
+					<a target="_blank" href="{{ asset('/manual/trencher-tm450a-manual.pdf') }}" class="btn btn--secondary btn--block">DOWNLOAD</a>
 				</div>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 					</div>
 				</div>
 				<div class="card__footer">
-					<a href="#" class="btn btn--secondary btn--block">DOWNLOAD</a>
+					<a target="_blank" href="{{ asset('/manual/tm1000-series-manual.pdf') }}" class="btn btn--secondary btn--block">DOWNLOAD</a>
 				</div>
 			</div>
 		</div>
@@ -95,7 +95,7 @@
 					</div>
 				</div>
 				<div class="card__footer">
-					<a href="#" class="btn btn--secondary btn--block">DOWNLOAD</a>
+					<a target="_blank" href="{{ asset('/manual/TM950A-manual.pdf') }}" class="btn btn--secondary btn--block">DOWNLOAD</a>
 				</div>
 			</div>
 		</div>
@@ -113,7 +113,7 @@
 					</div>
 				</div>
 				<div class="card__footer">
-					<a href="#" class="btn btn--secondary btn--block">DOWNLOAD</a>
+					<a target="_blank" href="{{ asset('/manual/trencher-tm600-manual.pdf') }}" class="btn btn--secondary btn--block">DOWNLOAD</a>
 				</div>
 			</div>
 		</div>
@@ -129,7 +129,7 @@
 					</div>
 				</div>
 				<div class="card__footer">
-					<a href="#" class="btn btn--secondary btn--block">DOWNLOAD</a>
+					<a target="_blank" href="{{ asset('/manual/15hp-wood-chipper.pdf') }}" class="btn btn--secondary btn--block">DOWNLOAD</a>
 				</div>
 			</div>
 		</div>
@@ -146,7 +146,7 @@
 					</div>
 				</div>
 				<div class="card__footer">
-					<a href="#" class="btn btn--secondary btn--block">DOWNLOAD</a>
+					<a target="_blank" href="{{ asset('/manual/6.5hp-wood-chipper.pdf') }}" class="btn btn--secondary btn--block">DOWNLOAD</a>
 				</div>
 			</div>
 		</div>
