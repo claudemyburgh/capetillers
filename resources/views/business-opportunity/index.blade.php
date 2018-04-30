@@ -55,10 +55,10 @@
               <div class="panel__body">
                 <ul>
                     <li>Springbok / Okiep / Garies / Vioolsdrift / Pofadder</li>
-                    <li>Upington/Kakamas</li>
-                    <li>Kuruman/Sishen/Hotazel</li>
+                    <li>Upington / Kakamas</li>
+                    <li>Kuruman / Sishen / Hotazel</li>
                     <li>Kimberley</li>
-                    <li>De Aar/Canarvon</li>
+                    <li>De Aar / Canarvon</li>
                 </ul>                  
               </div>
           </div>
@@ -72,9 +72,9 @@
             <div class="panel__body">            
                 <ul>
                     <li>Beaufort West</li>
-                    <li>Vredendal/Klawer/Vanrhynsdorp</li>
-                    <li>Worcester/Ceres/Robertson</li>
-                    <li>Caledon/Napier/Bredasdorp</li>
+                    <li>Vredendal / Klawer / Vanrhynsdorp</li>
+                    <li>Worcester / Ceres / Robertson</li>
+                    <li>Caledon / Napier / Bredasdorp</li>
                 </ul>                
             </div>
         </div> 
