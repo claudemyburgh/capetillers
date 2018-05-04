@@ -11,7 +11,8 @@
         "intervention/image": "^2.4",
         "laravel-validation-rules/phone": "^1.0",
         "laravel/framework": "5.6.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "spatie/laravel-sitemap": "^5.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1",
