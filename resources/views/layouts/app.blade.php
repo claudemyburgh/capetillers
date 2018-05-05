@@ -99,7 +99,7 @@
 		</footer>
 
 	
-		<div itemscope itemtype="http://schema.org/WebSite">
+		<div class="hide" itemscope itemtype="http://schema.org/WebSite">
 		  <meta itemprop="url" content="https://www.capetillers.co.za/"/>
 		  <form itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
 		    <meta itemprop="target" content="https://capetillers.co.za/search?q={search_term_string}"/>
