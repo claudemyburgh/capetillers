@@ -133,27 +133,41 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 	    $('.jQueryEqualHeight').jQueryEqualHeight('.panel .panel__body');
 	});
 
+	let stikyImages = () =>{
 
-	if ($('.product__photo__list').length) {
+		if (window.matchMedia('(min-width: 799px)').matches) {
 
-		$('.product__photo__list').flickity({
-			autoPlay: 3000,
-			pageDots: true,
-			prevNextButtons: true,
-			cellAlign: 'left',
-			contain: true
-		});
-	
-		var StickMe = new ScrollMagic.Scene({
-				triggerElement: ".stickme__trigger",
-				triggerHook: 0.2,
-				duration: "100%"
-			})
-			.setPin('.stickme', {pushFollowers: false})
-			// .addIndicators()
-			.addTo(controller);
+			if ($('.product__photo__list').length) {
+
+				$('.product__photo__list').flickity({
+					autoPlay: 3000,
+					pageDots: true,
+					prevNextButtons: true,
+					cellAlign: 'left',
+					contain: true
+				});
+			
+				var StickMe = new ScrollMagic.Scene({
+						triggerElement: ".stickme__trigger",
+						triggerHook: 0.2,
+						duration: "100%"
+					})
+					.setPin('.stickme', {pushFollowers: false})
+					// .addIndicators()
+					.addTo(controller);
+			}
+		} // media query
 
 	}
+
+	stikyImages()
+
+	window.addEventListener('resize', () => {
+		
+		stikyImages();
+
+	}, false)
+
 
 
 
