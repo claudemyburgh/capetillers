@@ -41,11 +41,14 @@
 		    			@endif
 		    		</div> 
 
+
+
 		    		<div class="form__group {{ $errors->has('price') ? ' has__danger' : '' }} ">
 		    			<label for="category_id" class="form__label">Category:</label>
 		    			<select class="form__item" name="category_id" id="category_id">
 		    				@foreach ($categories as $cat)
-			    				<option value="{{ $cat->id }}" {{ old('category_id', $product->category_id === $cat->id) ? ' selected' : '' }} >{{ $cat->name }}</option>
+			    				<option value="{{ $cat->id }}" {{ old('category_id', $product->category_id == $cat->id) ? ' selected' : '' }} >{{ $cat->name }}</option>
+
 		    				@endforeach
 		    			</select>
 		    			

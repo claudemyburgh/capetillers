@@ -42,6 +42,7 @@ class ProductsController extends Controller
 			 return redirect()->route('admin.product.create', [$product]);       
 		}
 		$categories = $category->get();
+		// return $product->category;
 		return view('admin.products.create', compact('product', 'categories'));
 	}
 
