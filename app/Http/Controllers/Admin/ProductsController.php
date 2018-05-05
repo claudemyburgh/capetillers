@@ -34,14 +34,14 @@ class ProductsController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function create(Product $product)
+	public function create(Product $product, Category $category)
 	{
 		if (!$product->exists) {
 			 $product = $this->createAndReturnSkeletonProduct();
 
 			 return redirect()->route('admin.product.create', [$product]);       
 		}
-		$categories = Category::get();
+		$categories = $category->get();
 		return view('admin.products.create', compact('product', 'categories'));
 	}
 
