@@ -14,7 +14,7 @@
 		        <a class="btn btn--primary" href="{{ route('admin.products.list') }}">Edit Products List</a>
 		    </div>
 		</div>
-		<data-component endpoint="{{ route('api.products.index') }}"></data-component> 
+		<data-component endpoint="{{ route('data.products.index') }}"></data-component> 
 	</div>
 </div>
 

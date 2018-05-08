@@ -6,7 +6,7 @@
 <div class="row">
 
 	<div class="md-col-12">
-		<data-component endpoint="{{ route('api.users.index') }}"></data-component> 
+		<data-component endpoint="{{ route('data.users.index') }}"></data-component> 
 	</div>
 </div>
 

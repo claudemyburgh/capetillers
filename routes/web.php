@@ -90,7 +90,7 @@ Route::group(['middleware' => ['auth', 'roles:admin'], 'prefix' => 'admin', 'as'
 });
 
 
-Route::group(['middleware' => ['auth'], 'as' => 'api.'], function(){
+Route::group(['middleware' => ['auth'], 'as' => 'data.'], function(){
 
 	Route::resource('data/categories', 'DataTables\CategoriesController');
 	Route::resource('data/users', 'DataTables\UsersController');
