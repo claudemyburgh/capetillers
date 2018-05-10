@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8cdd9a51bcd8be014044dcb5590955ef",
+    "content-hash": "59b719684c49a4f5735ee7da4ea1cfdf",
     "packages": [
         {
             "name": "designbycode/roles-and-permissions",
@@ -48,6 +48,54 @@
             ],
             "description": "Laravel Rolers and permissions",
             "time": "2017-12-23T11:44:44+00:00"
+        },
+        {
+            "name": "designbycode/tagger",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DesignByCode/Tagger.git",
+                "reference": "3146d01e974895217b7e3c97f74b07ce5883e0d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DesignByCode/Tagger/zipball/3146d01e974895217b7e3c97f74b07ce5883e0d3",
+                "reference": "3146d01e974895217b7e3c97f74b07ce5883e0d3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": ">=5.0",
+                "illuminate/support": ">=5.0",
+                "php": ">=5.6.25"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Designbycode\\Tagger\\Providers\\TaggerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Designbycode\\Tagger\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Claude Myburgh",
+                    "email": "claude@designbycode.co.za"
+                }
+            ],
+            "description": "a Tagging package for laravel",
+            "time": "2017-09-19T12:42:17+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

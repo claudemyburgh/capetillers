@@ -31,6 +31,7 @@
         "luna-sass": "^1.9.0",
         "path": "^0.12.7",
         "scrollmagic": "^2.0.5",
+        "select2": "^4.0.6-rc.1",
         "slimscroll": "^0.9.1",
         "sweetalert2": "^7.18.0"
     }
