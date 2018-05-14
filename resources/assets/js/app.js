@@ -52,10 +52,8 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 	$(document).Luna();
 
 
-	// $('.nav__scroll').slimScroll({
-	// 	height: "300px"
-	// });
-
+	var body = $("html, body");
+	body.stop().animate({scrollTop:0}, 500, 'swing');
 
 	if($('.notify__big').length){
 		TweenMax.to('.notify__big', 0.2, {y: "-100px", ease:Power0.easeOut, delay: 2})
