@@ -82,7 +82,8 @@ Route::group(['middleware' => ['auth', 'roles:admin'], 'prefix' => 'admin', 'as'
 			Route::get('/', 'SettingsController@index')->name('index');
 			Route::post('/cleandb', 'SettingsController@db_clean')->name('cleandb');
 			Route::post('/sitemap', 'SettingsController@make_sitmap')->name('sitemap');
-
+			Route::post('/config_cache', 'SettingsController@config')->name('config');
+			Route::post('/view_cache', 'SettingsController@view')->name('view');
 		});
 
 	});

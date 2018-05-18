@@ -18,42 +18,44 @@
 
 <script>
 import swal from 'sweetalert2'
-    export default {
-        props: [
-            'url',
-            'title'
-        ],
-        data () 
-        {
-        	return {
-        		disabled: false,
-        		loading: false
-        	}
-        },
-        methods: {
+	export default {
+		props: [
+			'url',
+			'title'
+		],
+		data () 
+		{
+			return {
+				disabled: false,
+				loading: false
+			}
+		},
+		methods: {
 
-        	runtask() {
-        		this.disabled = true
+			runtask() {
+				this.disabled = true
 				this.loading = true
-        		axios.post(this.url).then( () => {
-        			this.disabled = false
-        			this.loading = false
-        		}).catch((error) => {
+				axios.post(this.url).then( () => {
+					this.disabled = false
+					this.loading = false
+				}).catch((error) => {
+					this.disabled = false
+					this.loading = false
 					swal({
 						title: 'ERROR!!',
 						text: "Someting went wrong",
 						type: 'error',
 						showCancelButton: false
 					})
-        		})
+				})
 
-        	}
+			}
 
 
 
-        },
-        mounted() {
-            
-        }
-    }
+		},
+		mounted() {
+			
+		}
+	}
 </script>
