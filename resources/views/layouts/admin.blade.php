@@ -60,6 +60,11 @@
                     <a href="{{ route('admin.rolesandpermissions.index') }}"><i class="lunacon lunacon-management"></i> <span>Roles &amp; Permissions</span></a>
                 </li>
 
+
+                <li class="{{ return_if(on_page('admin/settings*' ), ' active') }}">
+                    <a href="{{ route('admin.settings.index') }}"><i class="lunacon lunacon-gears"></i> <span>Settings</span></a>
+                </li>
+
                 @endrole
             </ul>
         </div>

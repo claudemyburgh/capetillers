@@ -9,6 +9,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 Vue.component('data-component', require('./components/DataTable.vue'));
+Vue.component('run-task', require('./components/RunTask.vue'));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -40,7 +41,7 @@ const app = new Vue({
 	$(document).Luna();
 
 
-	var editor = CodeMirror(document.getElementById('editor'))
+	// var editor = CodeMirror(document.getElementById('editor'))
 
 	// $('#menu__trigger').click(function(){
 

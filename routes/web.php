@@ -72,6 +72,19 @@ Route::group(['middleware' => ['auth', 'roles:admin'], 'prefix' => 'admin', 'as'
 		 */
 		Route::get('rolesandpermissions', 'RolesPermissionsController@index')->name('rolesandpermissions.index');
 
+
+		/**
+		 * Settings
+		 */
+		
+		Route::group(['prefix' => 'settings', 'as' => 'settings.'], function() {
+
+			Route::get('/', 'SettingsController@index')->name('index');
+			Route::post('/cleandb', 'SettingsController@db_clean')->name('cleandb');
+			Route::post('/sitemap', 'SettingsController@make_sitmap')->name('sitemap');
+
+		});
+
 	});
 
 	/**
