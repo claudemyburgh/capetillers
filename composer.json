@@ -13,6 +13,7 @@
         "laravel-validation-rules/phone": "^1.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "~1.0",
+        "rap2hpoutre/laravel-log-viewer": "^0.14.3",
         "spatie/laravel-analytics": "^3.6",
         "spatie/laravel-sitemap": "^5.1"
     },

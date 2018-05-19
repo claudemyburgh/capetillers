@@ -63,7 +63,7 @@
 				
 			<template v-if="response.allow.searchable">
 				<div class="panel panel--default" v-if="!creating.active">
-					<div class="panel__header">{{ response.table }}</div>
+					<div class="panel__header"><h2>{{ response.table }}</h2></div>
 					<div class="panel__body">
 						<div class="row">
 							<div class="col"><label for="search" class="form__label">Search</label></div>

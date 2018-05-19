@@ -31,6 +31,19 @@ Route::post('/contact-us/send', 'PagesController@sendmail')->name('contact.send'
 
 
 
+
+
+/**
+ * Admin Section
+ * 
+ * Update admin section only when changes is made to backend
+ * 
+ * 
+ * 
+ */
+
+
+
 Route::group(['middleware' => ['auth', 'roles:admin'], 'prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin'], function(){
 
 	/**
@@ -72,21 +85,27 @@ Route::group(['middleware' => ['auth', 'roles:admin'], 'prefix' => 'admin', 'as'
 		 */
 		Route::get('rolesandpermissions', 'RolesPermissionsController@index')->name('rolesandpermissions.index');
 
+	});
 
-		/**
-		 * Settings
-		 */
-		
-		Route::group(['prefix' => 'settings', 'as' => 'settings.'], function() {
+	/**
+	 * Settings
+	 */
+	
+	Route::group(['prefix' => 'maintenance', 'as' => 'maintenance.'], function() {
 
-			Route::get('/', 'SettingsController@index')->name('index');
-			Route::post('/cleandb', 'SettingsController@db_clean')->name('cleandb');
-			Route::post('/sitemap', 'SettingsController@make_sitmap')->name('sitemap');
-			Route::post('/config_cache', 'SettingsController@config')->name('config');
-			Route::post('/view_cache', 'SettingsController@view')->name('view');
-		});
+		Route::get('/', 'MaintenanceController@index')->name('index');
+		Route::post('/cleandb', 'MaintenanceController@db_clean')->name('cleandb');
+		Route::post('/sitemap', 'MaintenanceController@make_sitmap')->name('sitemap');
+		Route::post('/config_cache', 'MaintenanceController@config')->name('config');
+		Route::post('/view_cache', 'MaintenanceController@view')->name('view');
 
 	});
+
+	/**
+	 * Logs
+	 */
+	
+	Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->name('logs.index');
 
 	/**
 	 * Clients

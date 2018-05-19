@@ -9,7 +9,13 @@
 	<div class="md-col-12">
 		<div class="panel pane--default" >
 		    <div class="panel__header">
-		        <a class="btn btn--primary" href="#">Back to Product</a>
+		    	<div class="btn__group">
+			        <a class="btn btn--primary" href="{{ route('admin.products.index') }}">Back to Product</a>
+		    		@if ($product->live)
+						<a class="btn btn--default" href="{{ route('admin.product.create.start') }}">Create a new product</a>
+		    		@endif	
+
+		    	</div>
 		    </div>
 		    <div class="panel__body">
 		    	<form action="{{ route('admin.product.store', $product) }}" method="post">

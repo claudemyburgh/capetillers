@@ -7,19 +7,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
 
-class SettingsController extends Controller
+class MaintenanceController extends Controller
 {
     
 
 	public function index()
 	{
-		return view('admin.settings.index');
+		return view('admin.maintenance.index');
 	}
 
 	public function db_clean()
 	{
 
-		Artisan::call('database:clean');
+		Artisan::queue('database:clean');
 		Log::info('Database cleaned');
 		return 'cleaned';
 	}	
@@ -28,7 +28,7 @@ class SettingsController extends Controller
 	public function make_sitmap()
 	{
 
-		Artisan::call('sitemap:generate');
+		Artisan::queue('sitemap:generate');
 
 		Log::info('Sitemap created');
 
@@ -39,7 +39,7 @@ class SettingsController extends Controller
 	public function config()
 	{
 
-		Artisan::call('config:cache');
+		Artisan::queue('config:cache');
 
 		Log::info('Config cached');
 
@@ -49,7 +49,7 @@ class SettingsController extends Controller
 	public function view()
 	{
 
-		Artisan::call('view:cache');
+		Artisan::queue('view:cache');
 
 		Log::info('View cached');
 

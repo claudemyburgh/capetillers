@@ -38,6 +38,6 @@ class CleanDatabase extends Command
      */
     public function handle()
     {
-        DB::table('products')->where('live', false)->where('name', 'like', 'Untitiled%')->delete();
+        DB::table('products')->where('name', 'like', 'Untitiled%')->delete();
     }
 }

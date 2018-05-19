@@ -60,12 +60,20 @@
                     <a href="{{ route('admin.rolesandpermissions.index') }}"><i class="lunacon lunacon-management"></i> <span>Roles &amp; Permissions</span></a>
                 </li>
 
+                @endrole
 
-                <li class="{{ return_if(on_page('admin/settings*' ), ' active') }}">
-                    <a href="{{ route('admin.settings.index') }}"><i class="lunacon lunacon-gears"></i> <span>Settings</span></a>
+
+                <li class="{{ return_if(on_page('admin/maintenance*' ), ' active') }}">
+                    <a  class="ellipsis" href="{{ route('admin.maintenance.index') }}"><i class="lunacon lunacon-gears"></i> <span>Maintenance</span></a>
                 </li>
 
-                @endrole
+
+                <li class="{{ return_if(on_page('admin/logs*' ), ' active') }}">
+                    <a href="{{ route('admin.logs.index') }}"><i class="lunacon lunacon-pencil"></i> <span>Logs</span></a>
+                </li>
+
+
+
             </ul>
         </div>
          
@@ -84,7 +92,7 @@
         </div>    
 
     </div>
-
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <!-- Scripts -->
     <script src="{{ asset('js/admin.js') }}"></script>
     @yield('scripts')
