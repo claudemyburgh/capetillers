@@ -23,9 +23,18 @@
 	<div class="sm-col-3">
 		<run-task title="Genarate Sitmap" url="{{ route('admin.maintenance.sitemap') }}"></run-task>
 	</div>
-
 	
 </div>
+
+<div class="row text-align-center">
+	
+	<div class="sm-col-3">
+		<run-task title="Cache Routes" url="{{ route('admin.maintenance.route') }}"></run-task>
+	</div>
+
+</div>
+
+
 
 @endsection
 

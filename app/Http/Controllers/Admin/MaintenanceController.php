@@ -56,5 +56,16 @@ class MaintenanceController extends Controller
 		return 'view cached';
 	}
 
+	public function route()
+	{
+
+		Artisan::queue('route:cache');
+
+		Log::info('Routes Cached');
+
+		return 'Routes Cached';
+	}
+
+
 
 }
