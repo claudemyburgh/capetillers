@@ -4560,9 +4560,9 @@ lru-cache@^4.0.1, lru-cache@^4.1.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-luna-sass@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/luna-sass/-/luna-sass-1.9.0.tgz#32cc81ebe7311b6e773128159d9838a9c6c5958e"
+luna-sass@^1.10.5:
+  version "1.10.5"
+  resolved "https://registry.yarnpkg.com/luna-sass/-/luna-sass-1.10.5.tgz#58a1cc0b5b1c328bb85b4e044c73d57164eb2159"
   dependencies:
     node-sass "^4.7.2"
 

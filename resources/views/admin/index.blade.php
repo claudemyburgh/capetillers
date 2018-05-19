@@ -8,7 +8,7 @@
 		<a class="dashboard__block--link" href="{{ route('admin.categories.index') }}">
 			<div class="dashboard__block">
 				<div class="dashboard__block--left">
-					<l class="lunacon lunacon-list lunacon--size-x2"></l>
+					<l class="lunacon lunacon-document lunacon--size-x3"></l>
 				</div>
 				<div class="dashboard__block--right">
 					<h3>Categories</h3>
@@ -22,7 +22,7 @@
 		<a class="dashboard__block--link" href="{{ route('admin.products.index') }}">
 			<div class="dashboard__block">
 				<div class="dashboard__block--left">
-					<l class="lunacon lunacon-giftbox lunacon--size-x2"></l>
+					<l class="lunacon lunacon-box-opened lunacon--size-x3"></l>
 				</div>
 				<div class="dashboard__block--right">
 					<h3>Products</h3>

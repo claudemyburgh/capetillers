@@ -45,7 +45,7 @@
 									<div class="stack" id="stack{{{$key}}}"
 											 style="display: none; white-space: pre-wrap;">{{{ trim($log['stack']) }}}
 									</div>
-				@endif
+								@endif
 							</td>
 						</tr>
 					@endforeach

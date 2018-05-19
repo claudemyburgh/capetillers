@@ -41,7 +41,7 @@
                     <a href="{{ route('admin.categories.index') }}"><i class="lunacon lunacon-list"></i> <span>Categories</span></a>
                 </li>
                 <li class="{{ return_if(on_page('admin/products*' ), ' active') }}">
-                    <a href="{{ route('admin.products.index') }}"><i class="lunacon lunacon-giftbox"></i> <span>Products</span></a>
+                    <a href="{{ route('admin.products.index') }}"><i class="lunacon lunacon-box-opened"></i> <span>Products</span></a>
                 </li>
 				@endrole
 
@@ -69,7 +69,7 @@
 
 
                 <li class="{{ return_if(on_page('admin/logs*' ), ' active') }}">
-                    <a href="{{ route('admin.logs.index') }}"><i class="lunacon lunacon-pencil"></i> <span>Logs</span></a>
+                    <a href="{{ route('admin.logs.index') }}"><i class="lunacon lunacon-test"></i> <span>Logs</span></a>
                 </li>
 
 
