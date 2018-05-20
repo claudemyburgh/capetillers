@@ -7,7 +7,7 @@
 	<h2><i class="fa fa-calendar" aria-hidden="true"></i> Laravel Log Viewer</h2>
 	<div class="list-group">
 		@foreach($files as $file)
-			<a href="?l={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}"
+			<a class="btn btn--default btn--lg" href="?l={{ \Illuminate\Support\Facades\Crypt::encrypt($file) }}"
 				 class="list-group-item @if ($current_file == $file) @endif">
 				{{$file}}
 			</a>
@@ -55,15 +55,16 @@
 			</div><!--responsive-table-->
 			@endif
 			<div class="clearfix">
+				<br>
 				@if($current_file)
-					<a href="?dl={{ \Illuminate\Support\Facades\Crypt::encrypt($current_file) }}"><span class="lunacon lunacon-download"></span>
+					<a class="btn btn--default" href="?dl={{ \Illuminate\Support\Facades\Crypt::encrypt($current_file) }}"><i class="lunacon lunacon-download"></i>
 						Download file</a>
-					-
-					<a id="delete-log" href="?del={{ \Illuminate\Support\Facades\Crypt::encrypt($current_file) }}"><span
-								class="lunacon lunacon-close-small"></span> Delete file</a>
+					
+					<a class="btn btn--default" id="delete-log" href="?del={{ \Illuminate\Support\Facades\Crypt::encrypt($current_file) }}"><i
+								class="lunacon lunacon-trash"></i> Delete file</a>
 					@if(count($files) > 1)
-						-
-						<a id="delete-all-log" href="?delall=true"><span class="lunacon lunacon-close-small"></span> Delete all files</a>
+						
+						<a class="btn btn--default" id="delete-all-log" href="?delall=true"><i class="lunacon lunacon-close-small"></i> Delete all files</a>
 					@endif
 				@endif
 			</div>

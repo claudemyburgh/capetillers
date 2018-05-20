@@ -6,6 +6,7 @@
 	height: 50px
 	border-right: solid 1px $mute-border-color
 	cursor: pointer
+	float: left
 	&::after 
 		font-family: "lunacon"
 		content: $unicode-navicon
@@ -66,12 +67,41 @@
 		&__right
 			position: relative
 			height: 50px
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+
+
+		&__avatar
+			position: relative
 			display: block
-			float: left
+			float: right
+			top: 5px
+			margin-right: 15px
+			margin-left: 15px
+
+			&__img 
+				position: relative
+				display: block
+				width: 40px
+				height: 40px
+				float: left
+				background: $mute-color
+				+radius(100%)
+
+
+			&__name
+				margin-left: 5px
+				font-weight: 900
+				line-height: 40px
+			    vertical-align: text-top
 
 
 body.menu-small
 	.admin__nav__left 
 		width: 0px		
 		+media-up(md)
-			width: 60px	
+			width: 60px
+
+	.admin__nav__right
+		// width: 100%

@@ -10,6 +10,10 @@ require('./bootstrap');
 window.Vue = require('vue');
 Vue.component('data-component', require('./components/DataTable.vue'));
 Vue.component('run-task', require('./components/RunTask.vue'));
+// Vue.component('facebook-app', require('./components/FacebookApp.vue'));
+Vue.component('sidebar-button', require('./components/SidebarButton.vue'));
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -23,9 +27,10 @@ require('slimscroll')
 
 
 
+
+
 const luna = require('luna-sass/Framework/js/luna.js');
 
-Vue.component('sidebar-button', require('./components/SidebarButton.vue'));
 
 const app = new Vue({
     el: '#app'
@@ -40,16 +45,6 @@ const app = new Vue({
 
 	$(document).Luna();
 
-
-	// var editor = CodeMirror(document.getElementById('editor'))
-
-	// $('#menu__trigger').click(function(){
-
-	// 	axios.post('admin/api/sidebarsession').then(function(){
-	// 		console.log('clicked');
-	// 	});
-		
-	// });
 
 
 

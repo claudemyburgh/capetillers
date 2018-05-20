@@ -24,7 +24,9 @@
             </div>
             <div class="admin__nav__right">
                 <sidebar-button url="{{ route('sidebartoggle') }}"></sidebar-button>  
-                
+                <div class="admin__nav__avatar">
+                	<img class="admin__nav__avatar__img" src="{{ get_gravatar(auth()->user()->email, '30') }}" alt="{{ auth()->user()->name }}"> <b class="admin__nav__avatar__name">{{ auth()->user()->name }}</b>
+                </div>
             </div>
         </div>
         <div class="admin__sidebar">

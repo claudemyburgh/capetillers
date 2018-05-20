@@ -9,6 +9,8 @@ use App\Client;
 use App\Http\Controllers\Controller;
 use App\Product;
 use Illuminate\Http\Request;
+use Analytics;
+use Spatie\Analytics\Period;
 
 
 class AdminController extends Controller
@@ -22,8 +24,9 @@ class AdminController extends Controller
 		$products = Product::isLive()->count();
 		$clients = Client::count();
 		
-
+		// $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
 	
+		// dd($analyticsData);
 
 		return view('admin.index', compact(['agents', 'products', 'clients']));
 	}
