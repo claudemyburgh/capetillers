@@ -379,6 +379,8 @@
 
 		mounted() {
 			this.getRecords()
+
+			console.log(this.endpoint)
 		}
 	}
 </script>

@@ -16,11 +16,11 @@ class RolesMiddleware
     public function handle($request, Closure $next, $role, $permission = null)
     {
         if (!$request->user()->hasRole($role)) {
-            abort(404);
+            return redirect()->back()->withError('You dont have right permission to access this pages');
         }
 
         if ($permission !== null && !$request->user()->can($permission)) {
-            abord(404);
+            return redirect()->back()->withError('You dont have right permission to access this pages');
         }
 
         return $next($request);

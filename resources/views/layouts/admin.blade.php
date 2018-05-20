@@ -88,6 +88,12 @@
                     </div>
                 @endif
 
+                @if (session()->has('error'))
+                    <div class="form__group">
+                        <div class="notify notify__dismissable notify--danger">{{ session('error') }}</div>
+                    </div>
+                @endif
+
                 @yield('content')
                 
             </div>

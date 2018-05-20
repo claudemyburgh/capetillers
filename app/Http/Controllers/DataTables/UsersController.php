@@ -11,6 +11,7 @@ class UsersController extends DatatablesController
 {
 
 	protected $modalText = 'CREATE A NEW USER';
+	// protected $allowCreation = false;
     
 	public function builder()
 	{

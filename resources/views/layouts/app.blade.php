@@ -114,13 +114,13 @@
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71625494-1"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ ENV('GOOGLE_ANALYTICS_ID') }}"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
-	  gtag('config', 'UA-71625494-1');
+	  gtag('config', '{{ ENV('GOOGLE_ANALYTICS_ID') }}');
 	</script>
 
 	
