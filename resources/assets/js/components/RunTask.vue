@@ -8,7 +8,7 @@
 				<div class="loader" id="loader-1"></div>
 			</div>
 			<div class="panel__footer">
-				<button @click.prevent="runtask" id="db-clean" v-bind:disabled="disabled"  class="btn btn--primary btn--block">RUN TASK</button>
+				<button @click.prevent="runtask" id="db-clean" v-bind:disabled="disabled"  class="btn btn--block"  :class="this.btn">RUN TASK</button>
 			</div>
 		</div>
 
@@ -21,7 +21,8 @@ import swal from 'sweetalert2'
 	export default {
 		props: [
 			'url',
-			'title'
+			'title', 
+			'btn'
 		],
 		data () 
 		{

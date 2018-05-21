@@ -99,6 +99,7 @@ Route::group(['middleware' => ['auth', 'roles:admin'], 'prefix' => 'admin', 'as'
 		Route::post('/config_cache', 'MaintenanceController@config')->name('config');
 		Route::post('/view_cache', 'MaintenanceController@view')->name('view');
 		Route::post('/route_cache', 'MaintenanceController@route')->name('route');
+		Route::post('/all_cache', 'MaintenanceController@clearCache')->name('cache');
 
 	});
 

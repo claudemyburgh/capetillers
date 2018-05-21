@@ -119,7 +119,7 @@
 					<a href="#" @click.prevent="destroy(selected)">Delete</a>
 				</div>
 				<div class="table__responsive">
-					<table class="table table--striped table--hover">
+					<table class="table table--striped table--bordered table--hover">
 						<thead class="table__head">
 							<tr>
 								<th v-if="canSelectItems && response.allow.deletion"> 

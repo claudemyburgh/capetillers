@@ -67,5 +67,20 @@ class MaintenanceController extends Controller
 	}
 
 
+	public function clearCache()
+	{
+		Artisan::queue('route:clear');
+		Artisan::queue('cache:clear');
+		Artisan::queue('view:clear');
+		Artisan::queue('config:clear');
+
+		Log::info('All cached files and view\'s cleared');
+
+		return 'cached cleared';
+
+
+	}
+
+
 
 }
