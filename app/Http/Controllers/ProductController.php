@@ -9,6 +9,7 @@ use App\Mail\ClientProductContactMail;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Intervention\Image\Image;
 
 class ProductController extends Controller
 {
@@ -39,6 +40,14 @@ class ProductController extends Controller
 	{
 	
 		return view('product.show', compact('category','product'));
+	}
+
+
+	public function getImage($image)
+	{
+
+		return $img = Image::make($image)->resize(320, 240);
+
 	}
 
 	/**

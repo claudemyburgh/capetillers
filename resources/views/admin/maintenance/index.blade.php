@@ -3,6 +3,13 @@
 @section('content')
 
 
+@if (!file_exists( public_path() . '/sitemap.xml'))
+	<div class="notify notify__dismissable notify--danger">
+		No Sitemap detected!
+	</div>
+@endif
+
+
 <div class="row">
 	<div class="md-col-12">
 		<h2>Maintenance &amp; Optimization</h2>
@@ -47,11 +54,12 @@
 		<h3>Database Tasks</h3>
 	</div>
 	<div class="md-col-3">
-		
 		<run-task title="Clean DataBase" btn="btn--primary" url="{{ route('admin.maintenance.cleandb') }}"></run-task>
 	</div>
 
 </div>
+
+
 
 
 

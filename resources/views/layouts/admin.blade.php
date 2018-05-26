@@ -24,8 +24,35 @@
             </div>
             <div class="admin__nav__right">
                 <sidebar-button url="{{ route('sidebartoggle') }}"></sidebar-button>  
-                <div class="admin__nav__avatar">
+{{--                 <div class="admin__nav__avatar">
                 	<img class="admin__nav__avatar__img" src="{{ get_gravatar(auth()->user()->email, '30') }}" alt="{{ auth()->user()->name }}"> <b class="admin__nav__avatar__name">{{ auth()->user()->name }}</b>
+                </div> --}}
+
+                <div class="nav__links__wrapper nav__links--left">
+			      <ul class="nav__links">
+
+			        <li class="nav__links__button">
+						<div class="dropdown">
+				        	<a class="btn btn--dark dropdown__link" href="#">
+					        	<img class="admin__nav__avatar__img" src="{{ get_gravatar(auth()->user()->email, '30') }}" alt="{{ auth()->user()->name }}">
+					        	<b class="admin__nav__avatar__name">{{ auth()->user()->name }}</b>
+					        	 <i class="lunacon lunacon-chevron-down"></i>
+					        </a>
+					        <div class="dropdown__container"> 
+					          <ul> 
+					          	<li>
+					          		<a href="{{ route('logout') }}"
+					            onclick="event.preventDefault(); document.getElementById('nav-logout').submit();"
+					            >Logout</a></li>
+					          </ul>
+					          <form id="nav-logout" action="{{ route('logout') }}" method="post">
+					              {{ csrf_field() }}
+					          </form>
+					        </div>
+							
+						</div>
+			    </li>
+			      </ul>
                 </div>
             </div>
         </div>
