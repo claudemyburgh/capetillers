@@ -15,7 +15,7 @@ import TweenMax from 'gsap'
 import ScrollMagic from 'scrollmagic'
 require('jquery-equal-height/js/jquery-equal-height.js');
 require('animation.gsap');
-require('debug.addIndicators');
+// require('debug.addIndicators');
 // require('ScrollToPlugin');
 
 require('jquery-slimscroll')
@@ -136,14 +136,6 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 		if (window.matchMedia('(min-width: 799px)').matches) {
 
 			if ($('.product__photo__list').length) {
-
-				$('.product__photo__list').flickity({
-					autoPlay: 3000,
-					pageDots: true,
-					prevNextButtons: true,
-					cellAlign: 'left',
-					contain: true
-				});
 			
 				var StickMe = new ScrollMagic.Scene({
 						triggerElement: ".stickme__trigger",
@@ -155,6 +147,18 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 					.addTo(controller);
 			}
 		} // media query
+
+		if ($('.product__photo__list').length) {
+
+			$('.product__photo__list').flickity({
+				autoPlay: 3000,
+				pageDots: true,
+				prevNextButtons: true,
+				cellAlign: 'left',
+				contain: true,
+				imagesLoaded: true
+			});
+		};
 
 	}
 
