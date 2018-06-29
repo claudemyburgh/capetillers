@@ -58,7 +58,7 @@ class ProductController extends Controller
 	{
 
 		if (!$client::where('email', $request->email)->exists()) {
-			$client->fill($request->only('name', 'email', 'phone'));
+			$client->sync($request->only('name', 'email', 'phone'));
 			$client->save();
 		}
 
