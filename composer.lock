@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37b39037b5b41df94c2c6fa192520c55",
+    "content-hash": "e59aae707ac093aa04c1fc3804ffe9c3",
     "packages": [
         {
             "name": "designbycode/roles-and-permissions",
@@ -2233,16 +2233,16 @@
         },
         {
             "name": "rap2hpoutre/laravel-log-viewer",
-            "version": "v0.14.3",
+            "version": "v0.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
-                "reference": "46b322385d7bc45b75019dc80d19bad65c0a10f7"
+                "reference": "11d4d717926f1faa79e0e5860105e0b263f8c87f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/46b322385d7bc45b75019dc80d19bad65c0a10f7",
-                "reference": "46b322385d7bc45b75019dc80d19bad65c0a10f7",
+                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/11d4d717926f1faa79e0e5860105e0b263f8c87f",
+                "reference": "11d4d717926f1faa79e0e5860105e0b263f8c87f",
                 "shasum": ""
             },
             "require": {
@@ -2284,7 +2284,7 @@
                 "logging",
                 "lumen"
             ],
-            "time": "2018-03-20T21:24:28+00:00"
+            "time": "2018-07-03T10:08:15+00:00"
         },
         {
             "name": "spatie/browsershot",

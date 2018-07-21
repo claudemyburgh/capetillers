@@ -99,7 +99,7 @@
 		<footer class=" footer footer__developer">
 			<div class="wrapper">
 				<div class="row text-align-center">
-					Design and Developed by <a href="http://designbycode.co.za">DesignByCode</a>
+					Design and Developed by <a href="http://designbycode.co.za" target="_blank">DesignByCode</a>
 				</div>
 			</div>
 		</footer>
