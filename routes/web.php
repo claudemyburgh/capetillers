@@ -124,6 +124,18 @@ Route::group(['middleware' => ['auth', 'roles:admin'], 'prefix' => 'admin', 'as'
 
 });
 
+Route::group(['middleware' => ['auth'], 'as' => 'data.'], function(){
+
+	Route::resource('data/categories', 'DataTables\CategoriesController');
+	Route::resource('data/users', 'DataTables\UsersController');
+	Route::resource('data/clients', 'DataTables\ClientsController');
+	Route::resource('data/products', 'DataTables\ProductsController');
+	Route::resource('data/roles', 'DataTables\RolesController');
+	Route::resource('data/permissions', 'DataTables\PermissionsController');
+	Route::resource('data/agents', 'DataTables\AgentsController');
+
+});
+
 
 
 

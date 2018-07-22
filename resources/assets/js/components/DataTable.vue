@@ -63,7 +63,7 @@
 				
 			<template v-if="response.allow.searchable">
 				<div class="panel panel--default" v-if="!creating.active">
-					<div class="panel__header"><h2>{{ response.table }}</h2></div>
+					<div class="panel__header">{{ response.table }}</div>
 					<div class="panel__body">
 						<div class="row">
 							<div class="col"><label for="search" class="form__label">Search</label></div>
@@ -119,7 +119,7 @@
 					<a href="#" @click.prevent="destroy(selected)">Delete</a>
 				</div>
 				<div class="table__responsive">
-					<table class="table table--striped table--bordered table--hover">
+					<table class="table table--striped table--hover">
 						<thead class="table__head">
 							<tr>
 								<th v-if="canSelectItems && response.allow.deletion"> 
@@ -379,8 +379,6 @@
 
 		mounted() {
 			this.getRecords()
-
-			console.log(this.endpoint)
 		}
 	}
 </script>
