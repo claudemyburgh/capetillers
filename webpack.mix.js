@@ -29,7 +29,8 @@ mix.webpackConfig({
 			"ScrollMagic": Path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
 			"animation.gsap": Path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
 			"debug.addIndicators": Path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
-			"flickity": Path.resolve('node_modules', 'flickity/dist/flickity.pkgd.js')
+			"flickity": Path.resolve('node_modules', 'flickity/dist/flickity.pkgd.js'),
+			"sticky-kit": Path.resolve('node_modules', 'sticky-kit/dist/sticky-kit.js')
 		}
 	}
 	})

@@ -133,5 +133,17 @@
     <!-- Scripts -->
     <script src="{{ asset('js/admin.js') }}"></script>
     @yield('scripts')
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71625494-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71625494-1');
+    </script>
+
 </body>
 </html>

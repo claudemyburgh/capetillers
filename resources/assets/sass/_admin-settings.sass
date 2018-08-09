@@ -86,7 +86,7 @@ $global-header-font: 'Montserrat Alternates', sans-serif
 $global-body-font: $base-font-family // override normalize base font family
 
 $font-path: '../fonts'
-
+@import "~luna-sass/Framework/sass/vendor/icons"
 
 // ==========================================
 // == Colors
@@ -187,16 +187,15 @@ $the__form__font__weight: $the__button__font__weight
 $the__form__border__radius: $the__button__border__radius
 $the__form__border__color: darken($mute-color, 25%)
 
-$the__form__checkbox__icon: "\E00F"
+$the__form__checkbox__icon: $unicode-checkmark
 $the__form__checkbox__icon__font: "Lunacon"
 $the__form__checkbox__icon__color: $primary-color
-$the__form__checkbox__icon__size: $base-font-size - 6px 
-$the__form__checkbox__icon__offset__top: 2px
-$the__form__checkbox__checkmark__offset__top: -1px
-$the__form__checkbox__icon__offset__left: 3px
+$the__form__checkbox__icon__size: $base-font-size - 6px
+$the__form__checkbox__icon__offset__top: 0px
+$the__form__checkbox__checkmark__offset__top: -2px
+$the__form__checkbox__icon__offset__left: 2px
 $the__form__checkbox__icon__border__focus__color: $primary-color
 $the__form__checkbox__icon__border__hover__color: $primary-color
-
 
 
 
@@ -279,7 +278,7 @@ $card__label__text__color: #fff
 
 
 // ==========================================
-// == Timeline 
+// == Timeline
 // ==========================================
 
 
@@ -304,3 +303,30 @@ $timeline__date__label__padding: 5px 10px
 $timeline__date__label__border-radius: 20px 0
 $timeline__date__label__position: top // top || bottom
 $timeline__date__offset: -$timeline__padding //not negative
+
+
+// ==========================================
+// == Accordian
+// ==========================================
+
+$accordian__radius: 3px
+$accordian__border__color: $mute-border-color
+// Header
+$accordian__header__background__color: #fff
+$accordian__header__background__color__hover: $mute-color
+$accordian__header__background__color__active: #fff
+
+$accordian__header__text__color: $global-font-color
+$accordian__header__text__color__hover: $global-font-color
+$accordian__header__text__color__active: $global-font-color
+// Body
+$accordian__body__background__color: $mute-color
+$accordian__body__text__color: $global-font-color
+//	icons
+$accordian__header__icon__color: $mute-border-color
+$accordian__header__icon__background__color: $mute-color
+$accordian__header__icon__background__border__color: $mute-border-color
+// icon active
+$accordian__header__icon__color__active: $mute-border-color
+$accordian__header__icon__background__color__active: #fff
+$accordian__header__icon__background__border__color__active: $mute-border-color

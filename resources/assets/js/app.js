@@ -18,6 +18,8 @@ require('animation.gsap');
 // require('debug.addIndicators');
 // require('ScrollToPlugin');
 
+require('sticky-kit');
+
 require('jquery-slimscroll')
 
 const luna =  require('luna-sass/Framework/js/luna.js');
@@ -135,16 +137,21 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 
 		if (window.matchMedia('(min-width: 799px)').matches) {
 
-			if ($('.product__photo__list').length) {
+			if ($('.stickme').length) {
+
+				$(".stickme").stick_in_parent({
+					offset_top: 100,
+					recalc_every: 1
+				});
 			
-				var StickMe = new ScrollMagic.Scene({
-						triggerElement: ".stickme__trigger",
-						triggerHook: 0.2,
-						duration: "100%"
-					})
-					.setPin('.stickme', {pushFollowers: false})
-					// .addIndicators()
-					.addTo(controller);
+				// var StickMe = new ScrollMagic.Scene({
+				// 		triggerElement: ".stickme__trigger",
+				// 		triggerHook: 0.2,
+				// 		duration: "100%"
+				// 	})
+				// 	.setPin('.stickme', {pushFollowers: false})
+				// 	// .addIndicators()
+				// 	.addTo(controller);
 			}
 		} // media query
 

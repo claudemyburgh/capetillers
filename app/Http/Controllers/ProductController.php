@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use App\Client;
-use App\Http\Requests\Email\ProductContactFormRequest;
-use App\Mail\ClientProductContactMail;
 use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use Intervention\Image\Image;
+use Newsletter;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ClientProductContactMail;
+use App\Http\Requests\Email\ProductContactFormRequest;
 
 class ProductController extends Controller
 {
@@ -66,6 +68,13 @@ class ProductController extends Controller
 		Mail::to('info@capetillers.co.za')
 			->queue(
 				new ClientProductContactMail($sender = $request->email, $name = $request->name, $phone = $request->phone, $product = $product, $message_body = $request->message_body));
+
+		if ( ! Newsletter::isSubscribed($request->email) ) {
+		    Newsletter::subscribe($request->email);
+		    Log::info($request->email . ' added to list');
+		}
+
+
 
 		return back()->withSuccess('We will came back to you as soon as possible.');
 	}

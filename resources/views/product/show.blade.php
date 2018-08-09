@@ -18,11 +18,10 @@
 </div>
 <div class="wrapper margin--bottom-small">
 	<div class="row stickme__trigger">
-		<div class="md-col-5 ">
-			<div class="stickme">
-				
+		<div class="md-col-5 stickme">
+			
 			@if ($product->photos()->count())
-				<div class="product__photo__list main-carousel">
+				<div class="product__photo__list main-carousel ">
 					@foreach ($product->photos as $photo)
 						<div class="carousel-cell">
 							<img class="product__photo__list__item__image" src="{{ Storage::url($photo->path) }}" alt="{{ config('app.name') . ' - ' . $product->slug }}">
@@ -35,7 +34,7 @@
 				<img class="product__photo__list__item__image" src="{{ asset('img/no-image.jpg') }}" alt="{{ config('app.name') . ' - ' . $product->slug }}">
 			</div>
 			@endif	
-			</div>
+		
 		</div>
 
 	
