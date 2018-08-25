@@ -15,7 +15,7 @@
 
 {!! nl2br($message_body) !!}
 <hr/>
-### Contact details off client
+### Contact details of client
 Name: {{ $name }} <br/>
 Email: {{ $email }}<br/>
 Phone: {{ $phone }}<br/>
