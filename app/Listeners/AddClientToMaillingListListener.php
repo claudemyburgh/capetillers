@@ -29,10 +29,15 @@ class AddClientToMaillingListListener
     public function handle($event)
     {
 
+
+    	$firstname = head(explode(' ', trim($event->details['name'])));
+
+
     	if (!Newsletter::isSubscribed($event->details['email']) ) {
-    	    Newsletter::subscribe($event->details['email']);
-    	    Log::info($event->details['email'] . ' added to list');
+    	    Newsletter::subscribe($event->details['email'], ['FNAME' => $firstname, 'PHONE' => $event->details['phone']]);
+    	    Log::info($request->email . ' added to list');
     	}
+
 
     }
 }

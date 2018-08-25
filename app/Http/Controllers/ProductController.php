@@ -64,13 +64,17 @@ class ProductController extends Controller
 			$client->save();
 		}
 
+		$firstname = head(explode(' ', trim($request->name)));
+
 
 		Mail::to('info@capetillers.co.za')
 			->queue(
 				new ClientProductContactMail($sender = $request->email, $name = $request->name, $phone = $request->phone, $product = $product, $message_body = $request->message_body));
 
+
+
 		if ( ! Newsletter::isSubscribed($request->email) ) {
-		    Newsletter::subscribe($request->email);
+		    Newsletter::subscribe($request->email, ['FNAME' => $firstname, 'PHONE' => $request->phone]);
 		    Log::info($request->email . ' added to list');
 		}
 
