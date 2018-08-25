@@ -3,6 +3,7 @@ let Path = require('path');
 let ImageminPlugin     = require('imagemin-webpack-plugin').default;
 let CopyWebpackPlugin  = require('copy-webpack-plugin');
 let imageminMozjpeg    = require('imagemin-mozjpeg');
+// let PromisePolyfill   = require("babel-polyfill");
 
 
 
@@ -40,24 +41,7 @@ mix.webpackConfig({
    .sass('resources/assets/sass/admin.sass', 'public/css')
    .webpackConfig({
        plugins: [
-           //Compress images
-           new CopyWebpackPlugin([{
-               from: 'resources/assets/img', // FROM
-               to: 'img/', // TO
-           }]),
-           new ImageminPlugin({
-               test: /\.(jpe?g|png|gif|svg)$/i,
-               pngquant: {
-                   quality: '65-80'
-               },
-               plugins: [
-                   imageminMozjpeg({
-                       quality: 65,
-                       //Set the maximum memory to use in kbytes
-                       // maxmemory: 1000 * 512
-                   })
-               ]
-           })
+
        ],
    });
 

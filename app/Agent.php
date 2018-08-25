@@ -2,10 +2,14 @@
 
 namespace App;
 
+use App\Traits\ActivableTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Agent extends Model
 {
+
+	use ActivableTrait;
+
    	protected $fillable = [
    		'name',
    		'company',
@@ -16,4 +20,9 @@ class Agent extends Model
    		'website',
    		'active'
    	];
+
+
+
+
+
 }

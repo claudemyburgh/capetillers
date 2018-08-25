@@ -16,3 +16,11 @@
 		max-width: 100%
 		display: block
 
+
+
+.stickme
+	+media-up(md)
+		@supports(position: sticky)
+			position: sticky
+			top: 120px
+			margin-bottom: 15px

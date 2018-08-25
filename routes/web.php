@@ -27,9 +27,13 @@ Route::post('email/product/{product}', 'ProductController@sendmail')->name('emai
 Route::get('/videos', 'PagesController@videos')->name('videos.index');
 Route::get('/manuals', 'PagesController@manuals')->name('manuals.index');
 Route::get('/contact-us', 'PagesController@contact')->name('contact.index');
-Route::post('/contact-us/send', 'PagesController@sendmail')->name('contact.send');
+// Route::post('/contact-us/send', 'PagesController@sendmail')->name('contact.send');
 
-
+/**
+ * For vue commponents
+ */
+Route::get('list_agents', 'AgentController@list')->name('list_agents');
+Route::post('contact-us/send', 'SendEmailController@sendmail')->name('contact.send');
 
 
 

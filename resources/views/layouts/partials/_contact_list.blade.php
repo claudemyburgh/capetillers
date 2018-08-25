@@ -17,7 +17,6 @@
 						<div class="panel__body">
 							<p>
 								<strong itemprop="givenName">{{ $agent->name }}</strong>
-								
 							</p>
 							@if ($agent->company)
 								<p><strong >Company:</strong><span itemprop="worksFor"> {{ $agent->company }}</span></p>
@@ -28,15 +27,15 @@
 							@endif
 
 							@if ($agent->cell)
-								<p><strong>Cell Phone:</strong> <ahref="tel:{{ trim($agent->cell) }}"><span itemprop="telephone"  >{{ $agent->cell }}</span></a></p>
+								<p><strong>Cell Phone:</strong> <a href="tel:{{ trim($agent->cell) }}"><span itemprop="telephone"  >{{ $agent->cell }}</span></a></p>
 							@endif
 
 							@if ($agent->email)
-								<p><strong >Email:</strong> <a  href="mailto:{{ trim($agent->email) }}"><span itemprop="email">{{ $agent->email }}</span></a></p>
+								<p><strong >Email:</strong> <a href="mailto:{{ trim($agent->email) }}"><span itemprop="email">{{ $agent->email }}</span></a></p>
 							@endif
 
 							@if ($agent->website)
-								<p><strong>Website:</strong> <a  href="{{ trim($agent->website) }}"><span itemprop="url" >{{ $agent->website }}</span></a></p>
+								<p><strong>Website:</strong> <a href="{{ trim($agent->website) }}"><span itemprop="url" >{{ $agent->website }}</span></a></p>
 							@endif
 
 
@@ -48,7 +47,7 @@
 		</div>
 	</div>
 	{{-- <div class="parallax__image"> --}}
-		<video  class="parallax__image" autoplay="true" loop="true" src="{{ asset('/video/file.mp4') }}"></video>
+		<video  class="parallax__image" preload="auto" autoplay="true" loop="true" src="{{ asset('/video/file.mp4') }}"></video>
 	{{-- </div> --}}
 
 </section>

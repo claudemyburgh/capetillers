@@ -25,6 +25,8 @@ class ProductContactFormRequest extends FormRequest
     public function rules()
     {
         return [
+        	'agent' => 'required',
+        	'subject' => 'required|string|max:90',
             'name' => 'required|string|min:3|max:60',
             'email' => 'required|string|email',
             'phone' => ['required', new Phone],

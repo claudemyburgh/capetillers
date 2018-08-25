@@ -2,18 +2,24 @@
 
 # Hello
 
-## {{ $name }} contacted you via the {{ config('app.name') }} website.
 
-Name: {{ $name }}
+@if($product)
+## {{ ucwords($name) }} contacted you via the {{ config('app.name') }} website about product <em>{{ ucwords($product) }}</em> 
+@else
+## {{ ucwords($name) }} contacted you via the {{ config('app.name') }} website.
+@endif
 
-Email: {{ $email }}
+<hr/>
 
-Phone: {{ $phone }}
-
-### Email Message:
+### Email Message
 
 {!! nl2br($message_body) !!}
-
+<hr/>
+### Contact details off client
+Name: {{ $name }} <br/>
+Email: {{ $email }}<br/>
+Phone: {{ $phone }}<br/>
+<hr/>
 Thanks,<br>
 {{ config('app.name') }}
 @endcomponent

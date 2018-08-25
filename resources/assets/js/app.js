@@ -7,7 +7,7 @@
 
 require('./bootstrap');
 
-// window.Vue = require('vue');
+window.Vue = require('vue');
 
 window.Flickity = require('flickity');
 
@@ -17,8 +17,6 @@ require('jquery-equal-height/js/jquery-equal-height.js');
 require('animation.gsap');
 // require('debug.addIndicators');
 // require('ScrollToPlugin');
-
-require('sticky-kit');
 
 require('jquery-slimscroll')
 
@@ -33,9 +31,11 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-// const app = new Vue({
-//     el: '#app'
-// });
+Vue.component('contact-form', require('./components/ContactForm.vue'));
+
+const app = new Vue({
+    el: '#app',
+});
 
 
 
@@ -44,18 +44,11 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 	'use strict';
 
 
-	// $('.theme_selector').click(function(e){
-	// 	axios.post("api/theme").then(function(){
-	// 		console.log('default');
-	// 	});
-	// });
-
-
 	$(document).Luna();
 
 
-	var body = $("html, body");
-	body.stop().animate({scrollTop:0}, 500, 'swing');
+	// var body = $("html, body");
+	// body.stop().animate({scrollTop:0}, 500, 'swing');
 
 	if($('.notify__big').length){
 		TweenMax.to('.notify__big', 0.2, {y: "-100px", ease:Power0.easeOut, delay: 2})
@@ -133,49 +126,18 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 	    $('.jQueryEqualHeight').jQueryEqualHeight('.panel .panel__body');
 	});
 
-	let stikyImages = () =>{
 
-		if (window.matchMedia('(min-width: 799px)').matches) {
+	if ($('.product__photo__list').length) {
 
-			if ($('.stickme').length) {
-
-				$(".stickme").stick_in_parent({
-					offset_top: 100,
-					recalc_every: 1
-				});
-			
-				// var StickMe = new ScrollMagic.Scene({
-				// 		triggerElement: ".stickme__trigger",
-				// 		triggerHook: 0.2,
-				// 		duration: "100%"
-				// 	})
-				// 	.setPin('.stickme', {pushFollowers: false})
-				// 	// .addIndicators()
-				// 	.addTo(controller);
-			}
-		} // media query
-
-		if ($('.product__photo__list').length) {
-
-			$('.product__photo__list').flickity({
-				autoPlay: 3000,
-				pageDots: true,
-				prevNextButtons: true,
-				cellAlign: 'left',
-				contain: true,
-				imagesLoaded: true
-			});
-		};
-
-	}
-
-	stikyImages()
-
-	window.addEventListener('resize', () => {
-		
-		stikyImages();
-
-	}, false)
+		$('.product__photo__list').flickity({
+			autoPlay: 3000,
+			pageDots: true,
+			prevNextButtons: true,
+			cellAlign: 'left',
+			contain: true,
+			imagesLoaded: true
+		});
+	};
 
 
 
@@ -185,6 +147,11 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 		TweenMax.to('.primary__overlay', 0.5, {x: "-100%"})
 		TweenMax.to('.secondary__overlay', 0.5, {x: "100%"})
 	});
+
+	$('.searchTrigger').click(function(e){
+		e.preventDefault()
+		$('#searchBlock').toggleClass('search__block--active');
+	})
 
 
 })(jQuery, window, document);
