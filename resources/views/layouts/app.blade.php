@@ -23,6 +23,7 @@
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
+
 	<title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
 
 	<!-- Styles -->

@@ -23,6 +23,9 @@
 					<input type="text" name="product" id="product" disabled :value="product" class="form__item">
 				</div>
 			</div>
+			<div v-else>
+				<input type="hidden" name="product" id="product" value="" class="form__item">
+			</div>
 
 			<div class="form__group" :class="errors.subject ? 'has__danger' : ''">
 				<label for="subject" class="form__label">Subject <strong class="text--danger">*</strong></label>
@@ -113,7 +116,7 @@
 					email: '',
 					phone: '',
 					message_body: '',
-					product: this.product
+					product: this.hasProduct ? this.product : ''
 				},
 				alertSuccess: false,
 			}
@@ -139,6 +142,8 @@
 						this.alertSuccess = false
 					}, 10000)
 					this.working = false
+
+					location.reload();
 
 				}).catch((error) => {
                     if (error.response.status === 422) {

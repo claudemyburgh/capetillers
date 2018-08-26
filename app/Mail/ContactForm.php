@@ -43,7 +43,7 @@ class ContactForm extends Mailable
 				'email' => $this->email,
 				'phone' => $this->phone,
 				'message_body' => $this->message_body,
-				'product' => $this->product
+				'product' => $this->product 
 			])
 			->markdown('emails.contact.contact');
 	}
