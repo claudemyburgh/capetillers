@@ -1,4 +1,4 @@
-<div id="searchBlock" class="search__block">
+{{-- <div id="searchBlock" class="search__block">
 	<div class="wrapper">
 		<div class="row">
 			<div class="col">
@@ -10,7 +10,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> --}}
 
 <div class="menu">
 	<div class="wrapper">

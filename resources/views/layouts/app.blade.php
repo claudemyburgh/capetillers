@@ -30,8 +30,6 @@
 
 	<link  href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-
-
 	<link defer href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
 
 </head>
@@ -54,7 +52,6 @@
 		  <div class="sk-cube3 sk-cube"></div>
 		</div>
 		<h1 class="text-align-center">LOADING....</h1>
-			
 	</div>
 
 	<div class="primary__overlay"></div>
