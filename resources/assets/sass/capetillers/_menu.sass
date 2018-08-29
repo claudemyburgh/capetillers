@@ -12,8 +12,10 @@
 		filter: drop-shadow(rgba(#000, 0.3) 0 3px 5px)
 
 		&__scroll
-			max-height: 400px
 			overflow-y: auto
+			
+			+media-custom('max', $navigation__breakpoint)
+				max-height: 400px
 
 	.nav__brand
 		position: relative	
