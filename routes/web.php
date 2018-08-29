@@ -29,6 +29,8 @@ Route::get('/manuals', 'PagesController@manuals')->name('manuals.index');
 Route::get('/contact-us', 'PagesController@contact')->name('contact.index');
 // Route::post('/contact-us/send', 'PagesController@sendmail')->name('contact.send');
 
+// Route::get('vegetable-data-sheet', 'PagesController@vegetableDataSheet')->name('vegetable-data-sheet');
+
 /**
  * For vue commponents
  */

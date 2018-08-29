@@ -33,7 +33,14 @@
 				       	</li>
 				       <li class="nav__links__item {{ return_if(on_page('business-opportunity' ), ' nav__links__item--active') }}"><a href="{{ route('business-opportunity.index') }}">BUSINESS OPPORTUNITY</a></li>
 				       <li class="nav__links__item {{ return_if(on_page('videos*' ), ' nav__links__item--active') }}"><a href="{{ route('videos.index') }}">VIDEOS</a></li>
-				       <li class="nav__links__item {{ return_if(on_page('manuals*' ), ' nav__links__item--active') }}"><a href="{{ route('manuals.index') }}">MANUALS</a></li>
+				       <li class="nav__links__item nav__links__item--dropdown">
+				       		<a href="#">DOWNLOADABLES</a>
+				       		<ul class="nav__links">
+						       <li class="nav__links__item {{ return_if(on_page('manuals*' ), ' nav__links__item--active') }}"><a href="{{ route('manuals.index') }}">MANUALS</a></li>
+						       <li class="nav__links__item"><a target="_blank" href="{{ asset('pdf/vegetable-data-sheet.pdf') }}">VEGETABLE DATA SHEET</a></li>
+				       			
+				       		</ul>
+				       </li>
 				       <li class="nav__links__item {{ return_if(on_page('contact-us' ), ' nav__links__item--active') }}"><a href="{{ route('contact.index') }}">CONTACT US</a></li>
 {{-- 				       <li class="nav__links__button">
 					       	<a class="btn btn--primary searchTrigger" href="#"> <i class="lunacon lunacon-search"></i> </a>

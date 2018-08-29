@@ -43,6 +43,12 @@ class PagesController extends Controller
 	}
 
 
+	// public function vegetableDataSheet()
+	// {
+	// 	return asset('pdfs/vegetable-data-sheet.pdf');
+	// }
+
+
 	public function sendmail(ProductContactFormRequest $request, Client $client)
 	{
 
