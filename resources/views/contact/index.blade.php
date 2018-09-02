@@ -23,6 +23,7 @@
 					Conatct Form
 				</div>
 				<div class="panel__body">
+					
 					<contact-form posturl="{{ route('contact.send') }}" clienturl="{{ route('list_agents') }}"></contact-form>	
 				</div>
 			</div>

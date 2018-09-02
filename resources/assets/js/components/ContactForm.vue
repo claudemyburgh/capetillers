@@ -17,19 +17,10 @@
 				</strong>
 			</div>
 
-			<div v-if="hasProduct">
-				<div class="form__group">
-					<label for="product" class="form__label">Product Name</label>
-					<input type="text" name="product" id="product" disabled :value="product" class="form__item">
-				</div>
-			</div>
-			<div v-else>
-				<input type="hidden" name="product" id="product" value="" class="form__item">
-			</div>
 
 			<div class="form__group" :class="errors.subject ? 'has__danger' : ''">
 				<label for="subject" class="form__label">Subject <strong class="text--danger">*</strong></label>
-				<input type="text" name="subject" id="subject" v-model="form.subject" class="form__item" >
+				<input :disabled="product === '' ? disabled : '' " type="text" name="subject" id="subject" v-model="form.subject" class="form__item" >
 				<strong v-if="errors.subject" class="form__helper">
 				    {{ errors.subject[0] }}
 				</strong>
@@ -99,9 +90,7 @@
 				type: String
 			},
 			product: {
-				type: String,
-				required: false,
-				default: null
+				default: ''
 			}
 		},
 		data(){
@@ -115,27 +104,18 @@
 					agent: '',
 					email: '',
 					phone: '',
-					message_body: '',
-					product: this.hasProduct ? this.product : ''
+					message_body: ''
 				},
 				alertSuccess: false,
 			}
-		},
-		computed: {
-
-			hasProduct() {
-				return this.product !== null ? true : false
-			}
-
-
 		},
 		methods: {
 			sendform() {
 				this.errors = ''
 				this.working = true
 				axios.post(this.posturl, this.form).then((response) => {
-
 					this.form = {}
+					this.form.subject = this.product
 					this.errors = {}
 					this.alertSuccess = true 
 					setTimeout(() => {
@@ -143,7 +123,7 @@
 					}, 10000)
 					this.working = false
 
-					location.reload();
+					// location.reload();
 
 				}).catch((error) => {
                     if (error.response.status === 422) {
@@ -155,6 +135,7 @@
 			}
 		},
 		mounted() {
+			this.form.subject = this.product
 			return axios.get(this.clienturl).then((response) => {
 				this.response = response.data.data
 			}) 

@@ -1,15 +1,13 @@
 @component('mail::message')
 
 # Hello
-
-
-@if($product)
-## {{ ucwords($name) }} contacted you via the {{ config('app.name') }} website about product <em>{{ ucwords($product) }}</em> 
-@else
 ## {{ ucwords($name) }} contacted you via the {{ config('app.name') }} website.
-@endif
-
 <hr/>
+
+## *Subject*
+<hr/>
+{{ $subject }}
+
 
 ### Email Message
 

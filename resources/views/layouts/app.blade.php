@@ -74,7 +74,28 @@
 		@include('layouts.partials._menu')
 		@if (!request()->is('/'))
 			<div class="hero__small"></div>
+			@include('layouts.partials._breadcrumbs')
+		@else 
+			<div class="hero">
+				<div class="wrapper">
+					<div class="md-col-8 md-offset-2 ">
+						<div class="hero__logo__wrapper">
+							<a href="">
+								<img class="hero__logo" src="{{ asset('/img/logo2.png') }}" alt="" class="responsive__image">
+							</a>
+						
+							<div class="hero__tiller">
+								<img class="responsive__image" src="{{ asset('/img/hero-tiller.png') }}" alt="">
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="hero__image"></div>
+			</div>	
 		@endif
+		
+		
 		@yield('content')
 		@include('layouts.partials._contact_list')
 {{-- 		<footer class="footer">

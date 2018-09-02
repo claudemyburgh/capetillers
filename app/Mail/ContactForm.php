@@ -25,7 +25,6 @@ class ContactForm extends Mailable
 		$this->email = $event->details['email'];
 		$this->phone = $event->details['phone'];
 		$this->message_body = $event->details['message_body'];
-		$this->product = $event->details['product'];
 	}
 
 	/**
@@ -43,7 +42,6 @@ class ContactForm extends Mailable
 				'email' => $this->email,
 				'phone' => $this->phone,
 				'message_body' => $this->message_body,
-				'product' => $this->product 
 			])
 			->markdown('emails.contact.contact');
 	}

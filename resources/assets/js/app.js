@@ -154,4 +154,7 @@ const app = new Vue({
 	})
 
 
+
+
+
 })(jQuery, window, document);

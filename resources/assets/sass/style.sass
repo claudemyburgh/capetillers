@@ -25,4 +25,54 @@
 @import "~luna-sass/Framework/sass/init"
 @import "capetillers/main"
 
+.breadcrumbs 
+	background: $mute-color
+	border-top: solid 1px $mute-border-color
+	border-bottom: solid 1px $mute-border-color
+	
 
+
+a.breadcrumb
+	display: inline-block
+	float: left
+	position: relative
+	margin-top: 0.25em // Allows for breadcrumb wrapping
+	margin-right: 0.25em
+	margin-bottom: 0.25em // Allows for breadcrumb wrapping
+	padding: 0.5em 0.5em 0.5em 1em
+	background: $mute-border-color
+	color: $mute-color
+	white-space: nowrap
+	text-decoration: none
+
+	&::before
+		position: absolute
+		content: ''
+		height: 100%
+		width: 0
+		top: 0
+		left: 0px
+		border-left: 10px solid $mute-color
+		border-top: 20px solid $mute-border-color
+		border-bottom: 20px solid $mute-border-color
+		z-index: 1
+
+	&::after
+		position: absolute
+		content: ''
+		height: 100%
+		width: 0
+		top: 0
+		right: -10px
+		border-left: 10px solid $mute-border-color
+		border-top: 20px solid transparent
+		border-bottom: 20px solid transparent
+		z-index: 2
+	
+
+	&:first-child::before 
+		border: none
+
+	&:hover
+		text-decoration: none
+		color: $primary-color

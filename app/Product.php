@@ -21,11 +21,23 @@ class Product extends Model
     	return 'slug';
     }
 
+    /**
+     * [category description]
+     * @return [type] [description]
+     */
     public function category()
     {
     	return $this->belongsTo(Category::class);
     }
 
+    /**
+     * [breadcrumbValue description]
+     * @return [type] [description]
+     */
+    public function breadcrumbValue()
+    {
+    	return title_case($this->name);
+    }
 
 
     /**

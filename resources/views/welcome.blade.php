@@ -4,23 +4,7 @@
 
 @section('content')
 
-<div class="hero">
-	<div class="wrapper">
-		<div class="md-col-8 md-offset-2 ">
-			<div class="hero__logo__wrapper">
-				<a href="">
-					<img class="hero__logo" src="{{ asset('/img/logo2.png') }}" alt="" class="responsive__image">
-				</a>
-			
-				<div class="hero__tiller">
-					<img class="responsive__image" src="{{ asset('/img/hero-tiller.png') }}" alt="">
-				</div>
-				
-			</div>
-		</div>
-	</div>
-	<div class="hero__image"></div>
-</div>
+
 
 <section class="section--dark">
 	<div class="wrapper">

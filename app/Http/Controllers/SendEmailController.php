@@ -21,7 +21,7 @@ class SendEmailController extends Controller
     		$client->save();
     	}
 
-		$details = $request->only('name', 'subject', 'agent', 'phone', 'email', 'message_body', 'product');
+		$details = $request->only('name', 'subject', 'agent', 'phone', 'email', 'message_body');
 
 		event(new SendEmailFromContactPageEvent($details));
 

@@ -22,6 +22,15 @@ class Category extends Model
         return 'slug';
     }
 
+    /**
+     * [breadcrumbValue description]
+     * @return [type] [description]
+     */
+    public function breadcrumbValue()
+    {
+    	return title_case($this->name);
+    }
+
 
     public function user()
     {

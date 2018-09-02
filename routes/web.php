@@ -17,8 +17,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('product/categories', 'CategoryController@index')->name('categories.index');
-Route::get('product/{category}', 'ProductController@index')->name('product.index');
+Route::get('products', 'CategoryController@index')->name('categories.index');
+Route::get('products/{category}', 'ProductController@index')->name('product.index');
 Route::get('products/{category}/{product}', 'ProductController@show')->name('product.show');
 Route::get('business-opportunity', 'PagesController@businessOpportunity')->name('business-opportunity.index');
 
