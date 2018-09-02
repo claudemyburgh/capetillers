@@ -11,7 +11,7 @@ class ContactForm extends Mailable
 {
 	use Queueable, SerializesModels;
 
-	public $subject, $name, $email, $phone, $message_body, $product;
+	public $subject, $name, $email, $phone, $message_body, $product, $admin_name, $admin_email;
 
 	/**
 	 * Create a new message instance.
@@ -35,7 +35,7 @@ class ContactForm extends Mailable
 	public function build()
 	{
 		return $this->subject($this->subject)
-			->cc(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'))
+			->cc(config('mail.from.address'))
 			->with([
 				'subject' => $this->subject,
 				'name' => $this->name,
