@@ -74,7 +74,7 @@
 		@include('layouts.partials._menu')
 		@if (!request()->is('/'))
 			<div class="hero__small"></div>
-			@include('layouts.partials._breadcrumbs')
+			{{-- @include('layouts.partials._breadcrumbs') --}}
 		@else 
 			<div class="hero">
 				<div class="wrapper">
