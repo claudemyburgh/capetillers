@@ -132,11 +132,13 @@
 				</div>
 			</div>
 		</footer>
+
+		
 		<div class="scrollup">
 		      <div class="wrapper"><a href="#" class="scrollup__button"></a></div>
 	    </div>
 
-	
+{{-- 	
 		<div class="hide" itemscope itemtype="http://schema.org/WebSite">
 		  <meta itemprop="url" content="https://www.capetillers.co.za/"/>
 		  <form itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
@@ -146,7 +148,7 @@
 		  </form>
 		</div>
 
-
+ --}}
 	</div>
 
 	<!-- Scripts -->
