@@ -41,7 +41,7 @@
     	},
         mounted() {
         	productsautocomplete('#products', {
-        		hitsPerPage: 2,
+        		hitsPerPage: 10,
         		appurl: this.appurl
         	})
             

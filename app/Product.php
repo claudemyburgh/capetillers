@@ -43,9 +43,10 @@ class Product extends Model
 	 */
 	public function toSearchableArray()
 	{
-		$products =  $this->toArray();
+		$products =  $this->isLive->toArray();
 
 		$products['category'] = $this->category;
+
 
 		return $products;
 	}
