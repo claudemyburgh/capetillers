@@ -60,7 +60,7 @@ const app = new Vue({
 	//Main Controller
 	var controller = new ScrollMagic.Controller();
 
-	if ($('.hero').length || window.width >= 900){
+	if ($('.hero').length){
 		var heroTween = new TimelineMax();
 
 		heroTween

@@ -31,6 +31,7 @@
 	<link  href="{{ ltrim(asset('css/style.css'), '/') }}" rel="stylesheet">
 
 	<link defer href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
 </head>
 <body>
