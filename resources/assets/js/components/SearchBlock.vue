@@ -5,10 +5,9 @@
 			<div class="row">
 				<div class="col">
 					<img class="algolia" src="/img/search.svg" alt="Algolia Search">
-					<form action="" @submit.prevent="send">					
+					<form @submit.prevent="send">					
 						<div class="form__group ">
-						
-							<input type="text" id="products" class="form__item form__item--xl" placeholder="SEARCH">
+							<input autofocus type="text" id="products" class="form__item form__item--xl" placeholder="SEARCH">
 							<a href="#" class="btn btn--mute searchTrigger"> <i class="lunacon lunacon-close-small"></i> </a>
 						</div>
 

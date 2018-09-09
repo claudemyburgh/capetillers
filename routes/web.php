@@ -20,6 +20,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('products', 'CategoryController@index')->name('categories.index');
 Route::get('products/{category}', 'ProductController@index')->name('product.index');
 Route::get('products/{category}/{product}', 'ProductController@show')->name('product.show');
+Route::get('products/{category}/{product}/download', 'ProductController@download')->name('product.download');
+
 Route::get('business-opportunity', 'PagesController@businessOpportunity')->name('business-opportunity.index');
 
 Route::post('email/product/{product}', 'ProductController@sendmail')->name('email.product.info');
