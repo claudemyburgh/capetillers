@@ -1,0 +1,37 @@
+.algolia-autocomplete {
+	width: 100%;
+}
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+	width: 100%;
+	text-transform: uppercase;
+}
+.algolia-autocomplete .aa-hint {
+	color: $dark-color;
+	text-transform: uppercase;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid $dark-color;
+	border-top: none;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+	cursor: pointer;
+	padding: 10px 30px;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+	background-color: $mute-color
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+.search__link{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	@include media-up(md)
+		flex-direction: row;
+}

@@ -1,16 +1,6 @@
-{{-- <div id="searchBlock" class="search__block">
-	<div class="wrapper">
-		<div class="row">
-			<div class="col">
-				<div class="form__item__group">
-					<div class="addon">SEARCH</div>
-					<input type="text" class="form__item form__item--xl">
-					<a href="#" class="btn btn--primary searchTrigger"> <i class="lunacon lunacon-close-small"></i> </a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> --}}
+
+
+<search-block appurl="{{ config('app.url') }}"></search-block>
 
 <div class="menu">
 	<div class="wrapper">
@@ -42,9 +32,10 @@
 				       		</ul>
 				       </li>
 				       <li class="nav__links__item {{ return_if(on_page('contact-us' ), ' nav__links__item--active') }}"><a href="{{ route('contact.index') }}">CONTACT US</a></li>
-{{-- 				       <li class="nav__links__button">
-					       	<a class="btn btn--primary searchTrigger" href="#"> <i class="lunacon lunacon-search"></i> </a>
-				       </li> --}}
+				       <li class="nav__links__button">
+				           	<a class="btn btn--primary searchTrigger" href="#"> <i class="lunacon lunacon-search"></i> </a>
+				       </li>
+
 				     </ul>
 				   </div>
 			</div>
