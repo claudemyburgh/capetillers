@@ -10,7 +10,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 window.Flickity = require('flickity');
-import "babel-polyfill";
+// import "babel-polyfill";
 import TweenMax from 'gsap'
 import ScrollMagic from 'scrollmagic'
 require('jquery-equal-height/js/jquery-equal-height.js');
