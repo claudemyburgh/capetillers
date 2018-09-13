@@ -29,7 +29,7 @@
 	<!-- Styles -->
 
 	<link  href="{{ ltrim(asset('css/style.css'), '/') }}" rel="stylesheet">
-	<!--[if lt IE 9]>
+	<!--[if IE]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
 	<link defer href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
